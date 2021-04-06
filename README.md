@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
+It is a page that displays a list of cocktails from [The Cocktail DB](https://www.thecocktaildb.com/). This was an APi I've used recently that seemed like a logical choice to get data pulled relatively quickly. 
+
+To have the API return data correclty you will need to put the API key in the `src/environments/environments.ts` file. In this format: 
+```
+export const environment = {
+  production: false,
+  API_KEY: <I'm including this in the email I'm sending you>
+};
+```
+From there, the page will pull up the list, you can sort, search/filter, or drag/drop. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

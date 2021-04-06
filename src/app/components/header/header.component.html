@@ -1,0 +1,25 @@
+<div id="full-header">
+    <mat-toolbar color="primary">
+        <span class="header-main-title">Clickup-test</span>
+        <div class="header-container">
+            <button mat-button class="link-button" routerLink="/">Main</button>
+        </div>
+        <span class="header-spacer"></span>
+        <button mat-icon-button (click)="sidenav.toggle()" class="hamburger-icon" aria-label="icon-button with menu icon">
+            <mat-icon class="hamburger-icon">menu</mat-icon>
+        </button>
+    </mat-toolbar>
+</div>
+<mat-sidenav-container class="sidenav-container" color="primary">
+    
+    <mat-sidenav #sidenav autoFocus="false" mode="over" position="end" [(opened)]="isMenuOpen" class="sidenav" (click)="onSidenavClick()">
+        <div id="sidenav-flex">
+            <button mat-button class="link-button" routerLink="/">Main</button>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>

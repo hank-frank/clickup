@@ -1,0 +1,78 @@
+@import '../../../styles.scss';
+
+.cocktail-list {
+    width: 50%;
+    min-width: fit-content;
+    color: $light-text;
+    padding: 0;
+    margin: 24px auto 60px auto;
+    > div {
+        background-color: $primary;
+        &:nth-of-type(1) {
+            background: transparent;
+        }
+    }
+}
+
+.no-rum {
+    text-align: center;
+    width: 100%;
+    color: $warn;
+    margin: 0;
+}
+
+div > .cocktail-list-element {
+    list-style: none;
+    border: 1px solid $dark-bg-lighter-20;
+    padding: 8px 16px;
+
+    @include horizontal-center;
+    justify-content: space-between;
+}
+
+.search-card {
+    background-color: $dark-bg-lighter-5;
+    width: fit-content;
+    margin: 12px auto;
+    height: fit-content;
+}
+
+.mat-focused .placeholder {
+    color: transparent;
+}
+
+.search-field {
+    margin: 16px auto 0 auto;
+    width: 400px;
+    color: $light-text;
+    font-size: 18px;
+
+    @include horizontal-center;
+    justify-content: space-between;
+
+    > mat-form-field {
+        width: 100%;
+        font-size: 24px;
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+    @include mobile {
+        width: 80vw;
+    }
+}
+
+.magnifying-glass {
+    color: $light-text;
+    font-size: 24px;
+    margin: auto 0;
+}
+
+.sort-icon { 
+    color: $light-text;
+    background-color:rgba(0, 0, 0, 0);
+    text-align: right;
+    margin: 0 6px 6px 0;
+    cursor: pointer;
+}

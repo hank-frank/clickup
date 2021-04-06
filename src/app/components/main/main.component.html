@@ -1,0 +1,18 @@
+<mat-card class="search-card">
+    <div class="search-field">
+        <mat-form-field>
+            <mat-placeholder class="placeholder">Search by name or ingredient</mat-placeholder>
+            <input matInput [(ngModel)]="searchValue" (ngModelChange)='search()'/>
+        </mat-form-field>
+        <mat-icon class="magnifying-glass">search</mat-icon>
+    </div>
+    <p class="no-rum">{{ searchedForRumMessage }}</p>
+</mat-card>
+<ul cdkDropList (cdkDropListDropped)="drop($event)" class="cocktail-list">
+    <div class="sort-icon" (click)="sort()">
+        <mat-icon>sort_by_alpha</mat-icon>
+    </div>
+    <div *ngFor="let cocktail of displayCocktails">
+        <li *noRum="cocktail" class="cocktail-list-element" cdkDrag>{{ cocktail.strDrink }}<mat-icon class="launch">launch</mat-icon></li>
+    </div>
+</ul>
