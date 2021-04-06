@@ -6,7 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
     transform(cocktails: any[], text: string) : any[] {
-        console.log('in transform', text);
         const lowerSearchString = text;
         const nameMatches = cocktails.filter((cocktail: any) => {
             const drinkName = cocktail.strDrink.toLowerCase();

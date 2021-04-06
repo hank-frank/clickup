@@ -26,7 +26,7 @@ export class ApiInterceptor implements HttpInterceptor {
                     return throwError(error);
                 }),
                 finalize(() => {
-                    console.log(`"${req.urlWithParams}"`);
+                    // console.log(`"${req.urlWithParams}"`);
                 })
             );
     }

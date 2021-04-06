@@ -13,6 +13,8 @@ export const environment = {
 ```
 From there, the page will pull up the list, you can sort, search/filter, or drag/drop. 
 
+As a suggestion, try searching for rum. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
